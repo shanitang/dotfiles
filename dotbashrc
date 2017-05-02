@@ -16,8 +16,30 @@ done
 # Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# boxen
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+# ADDED BY DOCKER-IMAGES
+eval "$(rbenv init -)"
 
-# docker-images
-[ -f ~/Code/zendesk/docker-images/dockmaster/zdi.sh ] && source ~/Code/zendesk/docker-images/dockmaster/zdi.sh
+# ADDED BY DOCKER-IMAGES
+source /Users/ytang/Code/zendesk/docker-images/dockmaster/zdi.sh
+
+# added for docker version manegement
+ [[ -s "$(brew --prefix dvm)/dvm.sh" ]] && source "$(brew --prefix dvm)/dvm.sh"
+ [[ -s "$(brew --prefix dvm)/bash_completion" ]] && source "$(brew --prefix dvm)/bash_completion"
+
+export DOCKER_SHARE_IVY=true
+export DOCKER_API_VERSION=1.22
+
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+export ZENDESK_DOORMAN_ENABLED=1
+
+export SBT_CREDENTIALS=~/.sbtcreds
+
+export ARTIFACTORY_USERNAME=ytang
+export ARTIFACTORY_KEY=AKCp2VpPyoNcjX8fmoHw7JaxCaxbiDJxFV4kQf1bAnRq4gbytLdALRGEE9j4V7S6Ej3iLk6TL
+
+export SAUCE_USERNAME=rdhanoa
+export SAUCE_ACCESS_KEY=8abb24ef-af9b-44a4-aa7a-a2e8fb9287d0
+
+export PATH=~/Code/zendesk/zendesk_sqid_tools/bin:$PATH;
