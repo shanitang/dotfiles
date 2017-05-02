@@ -10,9 +10,6 @@ for file in ~/dotfiles/autocomplete/* ; do
   source "$file"
 done
 
-# travis gem
-[ -f /Users/mgrosser/.travis/travis.sh ] && source /Users/mgrosser/.travis/travis.sh
-
 # Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
@@ -23,14 +20,14 @@ eval "$(rbenv init -)"
 source /Users/ytang/Code/zendesk/docker-images/dockmaster/zdi.sh
 
 # added for docker version manegement
- [[ -s "$(brew --prefix dvm)/dvm.sh" ]] && source "$(brew --prefix dvm)/dvm.sh"
- [[ -s "$(brew --prefix dvm)/bash_completion" ]] && source "$(brew --prefix dvm)/bash_completion"
+# [[ -s "/usr/local/opt/dvm/dvm.sh" ]] && source "$(brew --prefix dvm)/dvm.sh" # brew --prefix dvm
+# [[ -s "usr/local/opt/dvm/bash_completion" ]] && source "$(brew --prefix dvm)/bash_completion"
 
 export DOCKER_SHARE_IVY=true
 export DOCKER_API_VERSION=1.22
 
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+source /usr/local/opt/nvm/nvm.sh
 
 export ZENDESK_DOORMAN_ENABLED=1
 
